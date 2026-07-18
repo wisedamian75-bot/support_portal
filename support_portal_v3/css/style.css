@@ -1,0 +1,76 @@
+
+:root{
+ --red:#0b5cab;--red-dark:#073f78;--navy:#062a52;--ink:#1f2937;--muted:#667085;
+ --line:#e5e7eb;--soft:#f5f7fa;--white:#ffffff;--green:#168447;--amber:#8a6400;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--soft);color:var(--ink);line-height:1.55}
+a{text-decoration:none;color:inherit}
+.topbar{min-height:74px;background:var(--navy);border-bottom:1px solid #174b7b;display:flex;align-items:center;justify-content:space-between;padding:0 4%;gap:18px;position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:var(--red);color:#fff;border-radius:10px;font-size:13px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.08em}
+.main-nav{display:flex;gap:16px;align-items:center}
+.main-nav a{font-size:13px;font-weight:700;color:#ffffff}
+.main-nav a:hover{color:var(--red)}
+.auth-actions{display:flex;gap:10px;align-items:center}
+.user-chip{font-size:13px;font-weight:700;color:#dcecff}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:10px 15px;border:1px solid transparent;font-size:13px;font-weight:800;cursor:pointer}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-outline{background:#fff;border-color:#d0d5dd}
+.btn-outline:hover{border-color:var(--red);color:var(--red)}
+.btn-danger{background:#8d1730;color:#fff}
+.container{width:min(1180px,94%);margin:32px auto}
+.hero{min-height:520px;background:linear-gradient(90deg,rgba(6,42,82,.92),rgba(6,42,82,.55)),url("../assets/images/nairobi-water.jpg") center/cover no-repeat;display:flex;align-items:center;color:#fff}
+.hero-inner{width:min(1180px,92%);margin:auto}
+.hero h1{font-size:clamp(38px,6vw,70px);line-height:1.03;max-width:850px;margin-bottom:18px}
+.hero p{font-size:18px;color:#e5e7eb;max-width:650px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.section{padding:56px 0}
+.section-title{font-size:31px;margin-bottom:8px}
+.section-subtitle{color:var(--muted);margin-bottom:26px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted)}
+.dashboard-header{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:24px}
+.dashboard-header p{color:var(--muted)}
+.stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:24px}
+.stat-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:12px;padding:19px}
+.stat-card span{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase}
+.stat-card strong{display:block;font-size:30px;margin-top:5px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:22px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px;gap:12px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px 10px;text-align:left;border-bottom:1px solid #eaecf0;font-size:13px}
+th{background:#f7f8fa;text-transform:uppercase;color:#667085;font-size:11px}
+.form-card{max-width:800px;margin:32px auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px}
+.form-card h1{margin-bottom:7px}
+.form-card>p{color:var(--muted);margin-bottom:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:16px}
+.form-group.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}
+input,select,textarea{width:100%;border:1px solid #cfd4dc;border-radius:8px;padding:12px 13px;font:inherit;background:#fff}
+textarea{min-height:140px;resize:vertical}
+.alert{padding:13px 15px;border-radius:8px;margin-bottom:16px;font-weight:700}
+.alert-success{background:#dcf6e6;color:#126e3d}
+.alert-error{background:#fde3e8;color:#981128}
+.badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.badge-open{background:#e5f1ff;color:#1767a7}
+.badge-assigned,.badge-in-progress,.badge-pending{background:#fff0c8;color:#835d00}
+.badge-resolved{background:#dcf5e6;color:#147443}
+.badge-closed,.badge-cancelled{background:#ebedf0;color:#4b5563}
+.badge-low{background:#e2f4e8;color:#187344}
+.badge-medium{background:#fff0ca;color:#835d00}
+.badge-high,.badge-critical{background:#fde1e7;color:#9d1730}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:9px 16px}
+.kv strong{color:#dcecff}
+footer{background:var(--navy);color:#dce2eb;padding:34px 4%;margin-top:50px}
+footer strong{color:#fff}
+@media(max-width:1000px){.main-nav{display:none}.stat-grid{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:1fr}}
+@media(max-width:650px){.form-grid{grid-template-columns:1fr}.dashboard-header{flex-direction:column;align-items:flex-start}.stat-grid{grid-template-columns:1fr}.auth-actions .user-chip{display:none}}
+
+.brand{color:#fff}.brand small{color:#cfe5f7}.main-nav a:hover{color:#b9dcff}.dashboard-header{background:linear-gradient(120deg,#062a52,#0a3d72);color:#fff;padding:24px;border-radius:14px}.dashboard-header p{color:#dcecff}.section-title,.card h3,.form-card h1{color:#062a52}
